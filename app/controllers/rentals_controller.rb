@@ -56,6 +56,7 @@ class RentalsController < ApplicationController
     end
 
     def rental_params
-      params.require(:rental).permit(:price, :property_type, :no_of_bedrooms, :bedroom_type, :no_of_bathrooms, :bathroom_type, :deposit, :maximum_no_of_people_per_room, :address, :contact_number, :owner)
+      params.require(:rental).permit(:price, :property_type, :no_of_bedrooms, :bedroom_type, :no_of_bathrooms, :bathroom_type, :deposit, :maximum_no_of_people_per_room, :address, :contact_number, :owner, 
+:image)
     end
 end

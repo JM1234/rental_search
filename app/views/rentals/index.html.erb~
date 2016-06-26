@@ -21,7 +21,7 @@
   <tbody>
     <% @rentals.each do |rental| %>
       <tr>
-				<td><%= image_tag rental.image.url(:medium) %></td>
+				<td><%= image tag rental.image.url(:medium) %></td>
         <td><%= rental.price %></td>
         <td><%= rental.property_type %></td>
         <td><%= rental.no_of_bedrooms %></td>
