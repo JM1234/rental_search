@@ -1,59 +1,58 @@
-<%= image_tag @rental.image.url(:medium) %>
-
-<p>
-  <strong>Price:</strong>
-  <%= @rental.price %>
-</p>
-
-<p>
-  <strong>Property type:</strong>
-  <%= @rental.property_type %>
-</p>
-
-<p>
-  <strong>No of bedrooms:</strong>
-  <%= @rental.no_of_bedrooms %>
-</p>
-
-<p>
-  <strong>Bedroom type:</strong>
-  <%= @rental.bedroom_type %>
-</p>
-
-<p>
-  <strong>No of bathrooms:</strong>
-  <%= @rental.no_of_bathrooms %>
-</p>
-
-<p>
-  <strong>Bathroom type:</strong>
-  <%= @rental.bathroom_type %>
-</p>
-
-<p>
-  <strong>Deposit:</strong>
-  <%= @rental.deposit %>
-</p>
-
-<p>
-  <strong>Maximum no of people per room:</strong>
-  <%= @rental.maximum_no_of_people_per_room %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @rental.address %>
-</p>
-
-<p>
-  <strong>Contact number:</strong>
-  <%= @rental.contact_number %>
-</p>
-
-<p>
-  <strong>Owner:</strong>
-  <%= @rental.owner %>
-</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="row">		
+			<div class="col-md-4">
+				<%= image_tag @rental.image.url(:medium) %>	
+				<div class="table-responsive">
+					<table class="table">
+						<tbody>
+							<tr>
+								<td><strong>Price:</strong></td>
+							  <td><%= @rental.price %></td>
+							</tr>	
+							<tr>
+								<td><strong>Property type:</strong></td>
+								<td><%= @rental.property_type %></td>
+							</tr>	
+							<tr>
+								<td><strong>No of bedrooms:</strong></td>
+								<td><%= @rental.no_of_bedrooms %></td>
+							</tr>	
+							<tr>
+								<td><strong>Bedroom type:</strong></td>
+								<td><%= @rental.bedroom_type %></td>
+							</tr>	
+							<tr>
+								<td><strong>No of bathrooms:</strong></td>
+								<td><%= @rental.no_of_bathrooms %></td>
+							</tr>	
+							<tr>
+								<td><strong>Bathroom type:</strong></td>
+								<td><%= @rental.bathroom_type %></td>
+							</tr>	
+							<tr>
+								<td><strong>Deposit:</strong></td>
+								<td><%= @rental.deposit %></td>
+							</tr>	
+							<tr>
+								<td><strong>Maximum no of people per room:</strong></td>
+								<td><%= @rental.maximum_no_of_people_per_room %> </td>
+							</tr>
+							<tr>
+								<td><strong>Address:</strong></td>
+								<td><%= @rental.address %></td>
+							</tr>
+							<tr>
+								<td><strong>Contact number:</strong></td>
+								<td><%= @rental.contact_number %></td>
+							</tr>
+							<tr>
+								<td><strong>Owner:</strong></td>
+								<td><%= @rental.owner %></td>
+							</tr>
+			</div>
+	</div>	
+</div>
 
 <%= link_to 'Edit', edit_rental_path(@rental) %> |
 <%= link_to 'Back', rentals_path %>

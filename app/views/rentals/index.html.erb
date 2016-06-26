@@ -1,46 +1,17 @@
-<h1>Listing Rentals</h1>
+<% if !user_signed_in? %>
+	<div class="jumbotron">
+		<h1>Apartment-Boarding House-Bedspace for Rent</h1>
+		<p>A guide map for those who are searching for a residence at Downtown, Tacloban City, Leyte</p>
+		<p><%= link_to "Sign Up to add a Rental", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+	</div>
+<% end %>	
 
-<table>
-  <thead>
-    <tr>
-      <th>Price</th>
-      <th>Property type</th>
-      <th>No of bedrooms</th>
-      <th>Bedroom type</th>
-      <th>No of bathrooms</th>
-      <th>Bathroom type</th>
-      <th>Deposit</th>
-      <th>Maximum no of people per room</th>
-      <th>Address</th>
-      <th>Contact number</th>
-      <th>Owner</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @rentals.each do |rental| %>
-      <tr>
-				<td><%= image_tag rental.image.url(:medium) %></td>
-        <td><%= rental.price %></td>
-        <td><%= rental.property_type %></td>
-        <td><%= rental.no_of_bedrooms %></td>
-        <td><%= rental.bedroom_type %></td>
-        <td><%= rental.no_of_bathrooms %></td>
-        <td><%= rental.bathroom_type %></td>
-        <td><%= rental.deposit %></td>
-        <td><%= rental.maximum_no_of_people_per_room %></td>
-        <td><%= rental.address %></td>
-        <td><%= rental.contact_number %></td>
-        <td><%= rental.owner %></td>
-        <td><%= link_to 'Show', rental %></td>
-        <td><%= link_to 'Edit', edit_rental_path(rental) %></td>
-        <td><%= link_to 'Destroy', rental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Rental', new_rental_path %>
+<div class ="row">
+	<% @rentals.each do |rental| %>
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<%= link_to (image_tag rental.image.url(:medium), class: 'image'), rental %> 
+			</div>
+		</div>		
+	<%end%>
+</div>
