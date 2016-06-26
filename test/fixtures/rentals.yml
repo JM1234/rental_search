@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: MyString
+  property_type: MyString
+  no_of_bedrooms: 1
+  bedroom_type: MyString
+  no_of_bathrooms: 1
+  bathroom_type: MyString
+  deposit: MyString
+  maximum_no_of_people_per_room: MyString
+  address: MyString
+  contact_number: MyString
+  owner: MyString
+
+two:
+  price: MyString
+  property_type: MyString
+  no_of_bedrooms: 1
+  bedroom_type: MyString
+  no_of_bathrooms: 1
+  bathroom_type: MyString
+  deposit: MyString
+  maximum_no_of_people_per_room: MyString
+  address: MyString
+  contact_number: MyString
+  owner: MyString

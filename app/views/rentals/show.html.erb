@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @rental.price %>
+</p>
+
+<p>
+  <strong>Property type:</strong>
+  <%= @rental.property_type %>
+</p>
+
+<p>
+  <strong>No of bedrooms:</strong>
+  <%= @rental.no_of_bedrooms %>
+</p>
+
+<p>
+  <strong>Bedroom type:</strong>
+  <%= @rental.bedroom_type %>
+</p>
+
+<p>
+  <strong>No of bathrooms:</strong>
+  <%= @rental.no_of_bathrooms %>
+</p>
+
+<p>
+  <strong>Bathroom type:</strong>
+  <%= @rental.bathroom_type %>
+</p>
+
+<p>
+  <strong>Deposit:</strong>
+  <%= @rental.deposit %>
+</p>
+
+<p>
+  <strong>Maximum no of people per room:</strong>
+  <%= @rental.maximum_no_of_people_per_room %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @rental.address %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @rental.contact_number %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @rental.owner %>
+</p>
+
+<%= link_to 'Edit', edit_rental_path(@rental) %> |
+<%= link_to 'Back', rentals_path %>

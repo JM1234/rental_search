@@ -1,0 +1,61 @@
+<%= form_for(@rental) do |f| %>
+  <% if @rental.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rental.errors.count, "error") %> prohibited this rental from being saved:</h2>
+
+      <ul>
+      <% @rental.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :property_type %><br>
+    <%= f.text_field :property_type %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_bedrooms %><br>
+    <%= f.number_field :no_of_bedrooms %>
+  </div>
+  <div class="field">
+    <%= f.label :bedroom_type %><br>
+    <%= f.text_field :bedroom_type %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_bathrooms %><br>
+    <%= f.number_field :no_of_bathrooms %>
+  </div>
+  <div class="field">
+    <%= f.label :bathroom_type %><br>
+    <%= f.text_field :bathroom_type %>
+  </div>
+  <div class="field">
+    <%= f.label :deposit %><br>
+    <%= f.text_field :deposit %>
+  </div>
+  <div class="field">
+    <%= f.label :maximum_no_of_people_per_room %><br>
+    <%= f.text_field :maximum_no_of_people_per_room %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_number %><br>
+    <%= f.text_field :contact_number %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br>
+    <%= f.text_field :owner %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
