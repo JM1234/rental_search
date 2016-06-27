@@ -1,6 +1,6 @@
 <% if !user_signed_in? %>
 	<div class="jumbotron">
-		<h1>Apartment-Boarding House-Bedspacer for Rent</h1>
+		<h1>Apartment-Boarding House-Bedspace for Rent</h1>
 		<p>A guide map for those who are searching for a residence at Downtown, Tacloban City, Leyte</p>
 		<p><%= link_to "Sign Up to add a Rental", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
 	</div>
@@ -11,6 +11,7 @@
 		<div class="col-sm-6 col-md-3">
 			<div class="thumbnail">
 				<%= link_to (image_tag rental.image.url(:medium), class: 'image'), rental %> 
+				<td><%= rental.title %></td>
 			</div>
 		</div>		
 	<%end%>
