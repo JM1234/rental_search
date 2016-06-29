@@ -14,6 +14,10 @@ class RentalsController < ApplicationController
   end
 
   def edit
+		if (@rental.user_id != current_user.id)
+			redirect_to @rental
+			#can't delete
+		end
   end
 
   def create
@@ -43,11 +47,16 @@ class RentalsController < ApplicationController
   end
 
   def destroy
-    @rental.destroy
-    respond_to do |format|
-      format.html { redirect_to rentals_url, notice: 'Rental was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+		if (@rental.user_id != current_user.id)
+			redirect_to @rental
+			#can't delete
+		else
+    	@rental.destroy
+    	respond_to do |format|
+      	format.html { redirect_to rentals_url, notice: 'Rental was successfully destroyed.' }
+      	format.json { head :no_content }
+   		end
+		end
   end
 
   private
@@ -59,4 +68,11 @@ class RentalsController < ApplicationController
       params.require(:rental).permit(:title, :price, :property_type, :no_of_bedrooms, :bedroom_type, :no_of_bathrooms, :bathroom_type, :deposit, :maximum_no_of_people_per_room, :address, :contact_number, :owner, 
 :image)
     end
+
+		#def privileged_user
+		#	return @rental.user_id == current_user.rentals	
+			#	format.html { redirect_to @rental, notice: 'You cannot do that.' }
+      #  format.json { render :show, status: :ok, location: @rental }
+			#end
+		#end
 end

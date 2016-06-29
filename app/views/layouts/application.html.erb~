@@ -10,9 +10,15 @@
 	<%= render 'layouts/header' %>
 	<div class="container">
 		<% flash.each do |name, msg| %>
-			<%= content_tag(:div, msg, class: "alert alert-info) %>
+			<%= content_tag(:div, msg, class: "alert alert-info") %>
 		<%end%>
 	</div>
 	<%= yield %>
 </body>
+	<ul class="hmenu">
+  	<%= render 'devise/menu/registration_items' %>
+  	<%= render 'devise/menu/login_items' %>
+	</ul>
+	<%= yield %>
+	
 </html>
