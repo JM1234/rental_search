@@ -15,6 +15,7 @@ class RentalsController < ApplicationController
 
   def edit
 		if (@rental.user_id != current_user.id)
+			flash[:error] = "You are not allowed to edit this rental."
 			redirect_to @rental
 			#can't delete
 		end
@@ -48,8 +49,8 @@ class RentalsController < ApplicationController
 
   def destroy
 		if (@rental.user_id != current_user.id)
+			flash[:error] = "You are not allowed to delete this rental."
 			redirect_to @rental
-			#can't delete
 		else
     	@rental.destroy
     	respond_to do |format|

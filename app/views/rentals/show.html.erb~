@@ -9,7 +9,11 @@
 							<tr>
 								<td><strong>Title:</strong></td>
 							  <td><%= @rental.title %></td>
-							</tr>							
+							</tr>
+							<tr>
+								<td><strong>Description:</strong></td>
+							  <td><%= @rental.description %></td>
+							</tr>
 							<tr>
 								<td><strong>Price:</strong></td>
 							  <td><%= @rental.price %></td>
@@ -55,7 +59,7 @@
 								<td><%= @rental.owner %></td>
 							</tr>
 							<tr>
-								<td><strong>Info from:</strong></td>
+								<td><strong>Information from:</strong></td>
 								<td><%= @rental.user.email %></td>
 							</tr>
 			</div>
@@ -63,5 +67,5 @@
 </div>
 
 <%= link_to 'Edit', edit_rental_path(@rental) %> |
-<%= link_to 'Destroy', rental, method: :delete, data: {confirm: 'Are you sure?'} %> |
+<%= link_to 'Destroy', @rental, method: :delete, data: {confirm: 'Are you sure?'} %> |
 <%= link_to 'Back', rentals_path %>
