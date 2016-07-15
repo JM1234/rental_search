@@ -17,7 +17,6 @@ class RentalsController < ApplicationController
 		if (@rental.user_id != current_user.id)
 			flash[:error] = "You are not allowed to edit this rental."
 			redirect_to @rental
-			#can't delete
 		end
   end
 
@@ -67,13 +66,6 @@ class RentalsController < ApplicationController
 
     def rental_params
       params.require(:rental).permit(:title, :price, :property_type, :no_of_bedrooms, :bedroom_type, :no_of_bathrooms, :bathroom_type, :deposit, :maximum_no_of_people_per_room, :address, :contact_number, :owner, 
-:image)
+:image, :description)
     end
-
-		#def privileged_user
-		#	return @rental.user_id == current_user.rentals	
-			#	format.html { redirect_to @rental, notice: 'You cannot do that.' }
-      #  format.json { render :show, status: :ok, location: @rental }
-			#end
-		#end
 end
