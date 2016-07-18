@@ -11,18 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160717085911) do
-
-  create_table "profiles", force: :cascade do |t|
-    t.string   "full_name"
-    t.string   "email_address"
-    t.text     "address"
-    t.text     "about"
-    t.string   "contact_no"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "user_id"
-  end
+ActiveRecord::Schema.define(version: 20160710024019) do
 
   create_table "rentals", force: :cascade do |t|
     t.string   "price"
