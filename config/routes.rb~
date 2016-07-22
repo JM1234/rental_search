@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  get 'users/show'
-
+  #get 'users/index'
+  #get 'users/show'
+	
+	#get 'users/:id' => 'users#show'
   devise_for :users
   resources :rentals
-	resources :users
+	#resources :users 
+	resources :users, only: [:show]
 	root 'rentals#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
