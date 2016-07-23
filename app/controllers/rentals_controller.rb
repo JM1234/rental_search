@@ -3,7 +3,7 @@ class RentalsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @rentals = Rental.all
+    @rentals = Rental.where(["title LIKE ? ", "%#{params[:query]}%"])
   end
 
   def show
@@ -59,6 +59,12 @@ class RentalsController < ApplicationController
 		end
   end
 
+	def search
+		@q = "%#{params[:query]}%"
+		@rentals = Rental.where("title LIKE ? or property_type LIKE ? ", @q, @q)
+		render 'index'
+	end
+
   private
     def set_rental
       @rental = Rental.find(params[:id])
@@ -68,4 +74,5 @@ class RentalsController < ApplicationController
       params.require(:rental).permit(:title, :price, :property_type, :no_of_bedrooms, :bedroom_type, :no_of_bathrooms, :bathroom_type, :deposit, :maximum_no_of_people_per_room, :address, :contact_number, :owner, 
 :image, :description)
     end
+
 end

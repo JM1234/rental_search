@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :rentals
 	resources :users 
-	#resources :users, only: [:show]
 	root 'rentals#index'
 
+	post 'rentals/search' => 'rentals#search', as: 'search_rentals'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
