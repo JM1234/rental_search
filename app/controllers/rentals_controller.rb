@@ -1,6 +1,6 @@
 class RentalsController < ApplicationController
   before_action :set_rental, only: [:show, :edit, :update, :destroy]
-	before_action :authenticate_user!, except: [:index, :show]
+	before_action :authenticate_user!, except: [:index, :show, :search]
 
   def index
     @rentals = Rental.where(["title LIKE ? ", "%#{params[:query]}%"])
@@ -62,7 +62,10 @@ class RentalsController < ApplicationController
 	def search
 		@q = "%#{params[:query]}%"
 		@rentals = Rental.where("title LIKE ? or property_type LIKE ? ", @q, @q)
-		render 'index'
+		if (@rentals.count <= 0)
+			flash[:error] = "No results found."
+		end			
+		render 'index' 
 	end
 
   private

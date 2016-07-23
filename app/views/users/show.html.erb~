@@ -7,4 +7,5 @@
 	<p><%= link_to rental.title, rental_path(rental) %></p>
 	<%= link_to (image_tag rental.image.url(:medium), class: 'image'), rental %> 
 <% end %>
-	<p><%= link_to 'Edit Account', edit_user_registration_path %></p>
+<p><%= link_to "Edit Account", edit_user_registration_path(@user) %></p>
+<p><%= link_to "Logout", destroy_user_session_path %></p>

@@ -1,0 +1,5 @@
+module RentalsHelper
+	def correct_user?
+		@rental.user_id == @user.id
+	end
+end

@@ -62,10 +62,15 @@
 								<td><strong>Information from:</strong></td>
 								<td><%= @rental.user.email %></td>
 							</tr>
+							<tr>
+								<td><strong>Updated at: </strong></td>
+								<td><%= @rental.updated_at %></td>
+							</tr>
 			</div>
 	</div>	
 </div>
-
+<%= link_to 'Back', rentals_path %> |
+<% if (user_signed_in? && (current_user.id == @rental.user_id)) %>
 <%= link_to 'Edit', edit_rental_path(@rental) %> |
-<%= link_to 'Destroy', @rental, method: :delete, data: {confirm: 'Are you sure?'} %> |
-<%= link_to 'Back', rentals_path %>
+<%= link_to 'Destroy', @rental, method: :delete, data: {confirm: 'Are you sure?'} %>
+<% end %>
