@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 	root 'rentals#index'
 
 	post 'rentals/search' => 'rentals#search', as: 'search_rentals'
+	get '/:id', to: 'users#show', as: :profile
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
