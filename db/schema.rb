@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160721184426) do
+ActiveRecord::Schema.define(version: 20161110085332) do
 
   create_table "rentals", force: :cascade do |t|
     t.string   "price"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20160721184426) do
     t.datetime "image_updated_at"
     t.string   "title"
     t.string   "description"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "users", force: :cascade do |t|

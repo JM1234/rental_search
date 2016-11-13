@@ -71,6 +71,11 @@ class RentalsController < ApplicationController
   private
     def set_rental
       @rental = Rental.find(params[:id])
+			@hash = Gmaps4rails.build_markers(@rental) do |rental, marker|
+			marker.lat rental.latitude
+			marker.lng rental.longitude
+			marker.infowindow rental.title
+			end
     end
 
     def rental_params
