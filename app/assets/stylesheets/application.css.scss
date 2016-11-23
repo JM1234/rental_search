@@ -18,7 +18,12 @@
 @import "bootstrap";
 
 body{
-	background: #AA4847;
+	background-image: url("http://www.stanboroughmusic.com/wp-content/uploads/2016/04/kn00ykk-800x445.png");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .rental_title {

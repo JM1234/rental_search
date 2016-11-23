@@ -1,9 +1,11 @@
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Francois+One" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
 
 <% if !user_signed_in? %>
 	<div class="jumbotron">
-		<h1>Apartment-Boarding House-Bedspace for Rent</h1>
-		<p>A guide map for those who are searching for a residence at Downtown, Tacloban City, Leyte</p>
-		<p><%= link_to "Sign Up to add a Rental", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+		<h1>EsHi Rentals</h1>
+		<p style="font-family: Yanone Kaffeesatz; font-size: 20px; color: #8d8d81">A guide map for those who are searching for residence.</p>
+		<%= link_to "Sign Up to add a Rental", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 	</div>
 <% end %>	
 
