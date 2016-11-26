@@ -1,3 +1,65 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.bg{
+	margin-right: auto;
+	margin-left: auto;
+	background: #d5d5d5;
+	width: 50%;
+	opacity: 0.9;
+	padding-top: 15px;
+}
+
+h2.reg{
+	text-align: center;
+	font-family: Francois One;
+	margin-bottom: 20px;
+}
+
+label, input, p#link{
+	font-family: Yanone Kaffeesatz;
+	font-size: 18px;
+	color: #5e5e5e;
+}
+
+input:not(#checkbox), textarea{
+	width: 250px;
+}
+
+div.field:not(#checkfield){
+	margin-left: 30%;
+}
+
+input.checkbox{
+	height: 50px;
+}
+
+input.submit{
+	height: 40px;
+	margin-left: 30%;
+	font-family: Francois One;
+	font-size: 18px;
+}
+
+p.label{
+	font-size: 18px;
+	color: #5e5e6e;
+	font-style: italic;
+	margin-left: 25%;
+	font-family: Francois One;
+}
+
+a{
+	font-size: 18px;
+}
+
+td>strong{
+	font-family: Francois One;
+	font-size: 18px;
+}
+
+td{
+	font-family: Yanone Kaffeesatz;
+	font-size: 18px;
+}
