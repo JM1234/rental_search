@@ -1,10 +1,10 @@
 class RentalsController < ApplicationController
-  before_action :set_rental, only: [:show, :edit, :update, :destroy]
+  before_action :set_rental, only: [:index, :show, :edit, :update, :destroy]
 	before_action :authenticate_user!, except: [:index, :show, :search]
 
   def index
-    @rentals = Rental.where(["title LIKE ? ", "%#{params[:query]}%"])
-  end
+			@rentals = Rental.where(["title LIKE ? ", "%#{params[:query]}%"])
+	end
 
   def show
   end
@@ -70,14 +70,19 @@ class RentalsController < ApplicationController
 
   private
     def set_rental
-      @rental = Rental.find(params[:id])
-			@hash = Gmaps4rails.build_markers(@rental) do |rental, marker|
-			marker.lat rental.latitude
-			marker.lng rental.longitude
-			marker.infowindow rental.title
-			end
-    end
 
+      if (params[:id]!=nil)
+				@rental= Rental.find(params[:id])
+			else
+				@rental = Rental.all 
+			end
+
+			@hash = Gmaps4rails.build_markers(@rental) do |rental, marker|
+				marker.lat rental.latitude
+				marker.lng rental.longitude
+				marker.infowindow rental.title
+    	end
+end
     def rental_params
       params.require(:rental).permit(:title, :price, :property_type, :no_of_bedrooms, :bedroom_type, :no_of_bathrooms, :bathroom_type, :deposit, :maximum_no_of_people_per_room, :address, :contact_number, :owner, 
 :image, :description, :latitude, :longitude)

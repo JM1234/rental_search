@@ -1,51 +1,16 @@
-<style>
-
-div.sign_up{
-	margin-right: auto;
-	margin-left: auto;
-	background: #d5d5d5;
-	width: 50%;
-	opacity: 0.8;
-}
-
-h2{
-	text-align: center;
-	font-family: Francois One;
-}
-
-label, input{
-	font-family: Yanone Kaffeesatz;
-	font-size: 18px;
-	color: #5e5e5e;
-}
-
-
-input, textarea{
-	width: 250px;
-}
-
-div.field{
-	margin-left: 30%;
-}
-
-input#submit{
-	height: 40px;
-	margin-left: 30%;
-	font-weight: bold;
-}
-
-</style>
 
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Francois+One" />
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
-<div class="sign_up">
 
-<h2>Sign up</h2>
+<div class="bg">
+
+<h2 class=reg;>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="field" style="margin-top: 20px;">
+	
+	<p class="label">Personal Information</p>
+  <div class="field" style="margin-top: 10px;" >
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name, autofocus: true %>
   </div>
@@ -53,13 +18,16 @@ input#submit{
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name, autofocus: true %>
   </div>
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
-  </div>
-  <div class="field">
+  <div class="field" style="margin-bottom: 20px;">
     <%= f.label :about %><br />
     <%= f.text_area :about, autofocus: true %>
+  </div>
+	
+	<p class="label">Account</p>
+	
+	 <div class="field" style="margin-top: 10px;">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
@@ -74,16 +42,17 @@ input#submit{
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-  <div class="field" style="margin-bottom: 20px;">
+  <div class="field" style="margin-bottom: 15px;">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%=f.submit "Sign up",  :id=>'submit' %>
+    <%=f.submit "Sign up",  :class=>'submit' %>
   </div>
 <% end %>
-</div>
 
-<%= render "devise/shared/links" %>
+<p id="link" style="font-style: italic; display: inline; margin-right: 7px;">Already have an account? </p><%= render "devise/shared/links" , :id=>'log_in_link' %>
+
+</div>
 

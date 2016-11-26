@@ -11,16 +11,100 @@ div.jumbotron{
 	opacity: 0.8;
 	font-family: Francois One;
 	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 15px;
 }
 
 a.btn btn-primary{
 	border: 10px white;
 	display: inline;
 	background-color: #8EAEBD;
-	margin-top: 20px;
 }
 
 a.btn{
 	background: #e1e8f3;
 	border: 2px black;
+}
+
+div.gmap{
+	margin-right: auto;
+	margin-left: auto;
+	width: 1100px;
+	margin-bottom: 30px;
+}
+
+p#headlabel{
+	font-family: Yanone Kaffeesatz;
+	font-size: 20px;
+	color: #8d8d81;	
+	margin-bottom: 40px;
+}
+
+////show rental 
+
+div.row{
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 20px;
+}
+
+div.show_map{
+	float: left;
+	width:50%;
+	margin:0px;
+}
+
+div.show{
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 30px;
+}
+
+div.col-md-4{
+	float: left;
+	width: 50%;
+	padding: 0px;
+}
+
+div.img_bg{
+	position: relative;
+	height: 400px;
+	background: white;
+	border: 2px solid rgba(193, 127, 227, 0.95);
+}
+
+img#show_image{
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	position: absolute;
+}
+
+strong{
+	font-family: Francois One;
+	white-space: nowrap;
+}
+
+td:not(strong){
+	font-family: Yanone Kaffeesatz;
+	white-space: nowrap;
+}
+
+div.col-md-4>div.panel{
+	width: -moz-available;
+	background: #cbe6a3;
+	color: #lc5e60;
+}
+
+div.show_map>div.panel{
+	width: -moz-available;
+	color: orange;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.map_info>td{
+	font-size: 50px;
 }
