@@ -28,6 +28,7 @@
   </div>
 <% end %>
 
+<div id="login_other">
 <%= render "devise/shared/links" %>
-
+</div>
 </div>

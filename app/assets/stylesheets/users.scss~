@@ -5,13 +5,14 @@
 div.bg{
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 20px;
 	background: #d5d5d5;
 	width: 50%;
 	opacity: 0.9;
-	padding-top: 15px;
+	padding: 15px 15px 30px 15px;
 }
 
-h2.reg{
+h1.reg, h2.reg{
 	text-align: center;
 	font-family: Francois One;
 	margin-bottom: 20px;
@@ -23,12 +24,12 @@ label, input, p#link{
 	color: #5e5e5e;
 }
 
-input:not(#checkbox), textarea{
+textarea, input:not(#checkbox){
 	width: 250px;
 }
 
-div.field:not(#checkfield){
-	margin-left: 30%;
+div.field:not(#checkfield, div.edit_bg>div.field){
+	margin-left: 32%;
 }
 
 input.checkbox{
@@ -37,12 +38,12 @@ input.checkbox{
 
 input.submit{
 	height: 40px;
-	margin-left: 30%;
+	margin-left: 32%;
 	font-family: Francois One;
 	font-size: 18px;
 }
 
-p.label{
+p.label, p.links{
 	font-size: 18px;
 	color: #5e5e6e;
 	font-style: italic;
@@ -57,10 +58,48 @@ a{
 td>strong{
 	font-family: Francois One;
 	font-size: 18px;
-	width: 100px;
 }
 
 td{
 	font-family: Yanone Kaffeesatz;
 	font-size: 18px;
+}
+
+span.label{
+	height: 40px;
+	margin-left: 20%;
+	font-family: Francois One;
+	font-size: 18px;
+	color: rgb(16, 94, 144);
+}
+
+span.info{
+	font-family: Yanone Kaffeesatz;
+	font-size: 20px;
+	margin-left: 7%;
+	color: rgb(19, 76, 102);
+}
+
+a.login_link{
+	float: left;
+}
+
+a#editacc_back{
+	float: right;
+	margin-bottom: 10px;
+}
+
+div#cancel_acc{
+	clear: right;
+	text-align: center;
+	padding-top: 10px;
+	display: block; 
+	border-top: solid 2px black;
+	font-size: 18px;
+}
+
+p#norent{
+	font-family: Francois One;
+	font-size: 18px;
+	text-align: center;
 }

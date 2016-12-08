@@ -1,15 +1,14 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Francois+One" />
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
 
-<style>
-</style>
+<div class="bg">
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2 class="reg">Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="field">
+	<p class="label">Personal Information</p>
+  <div class="field"  style="margin-top: 10px;">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name, autofocus: true %>
   </div>
@@ -17,15 +16,17 @@
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name, autofocus: true %>
   </div>
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
-  </div>
-  <div class="field">
+  
+  <div class="field" style="margin-bottom: 20px;">
     <%= f.label :about %><br />
     <%= f.text_area :about, autofocus: true %>
   </div>
-
+	
+	<p class="label">Account</p>
+	<div class="field" style="margin-top: 10px;">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true %>
+  </div>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -45,20 +46,17 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="field">
+  <div class="field" style="margin-bottom: 15px;">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update" ,:class=>'submit' %>
   </div>
-
+	
+	<%= link_to "Back", current_user, class:"active", :id=>'editacc_back' %>
 <% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-
-<%= link_to "Back", :back %>
+	<div id='cancel_acc' style="font-family: Yanone Kaffeesatz;">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></div>
+</div>

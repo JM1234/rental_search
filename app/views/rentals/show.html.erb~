@@ -23,8 +23,8 @@
 							<td><%= @rental.owner %></td>
 						</tr>
 						<tr>
-							<td><strong>Information from:</strong></td>
-							<td><%= link_to @rental.user.email, profile_path(@rental.user) %></td>
+							<td><strong>Uploaded by: </strong></td>
+							<td><%= link_to @rental.user.email, profile_path(@rental.user) , :id=> 'profile' %></td>
 						</tr>
 				</tbody>
 			</table>
@@ -87,16 +87,16 @@
 			</tbody>
 		</table>	
 			
-			<%= link_to 'Back', rentals_path %> |
+	<div class="show_links">
+			<%= link_to 'Back', rentals_path %>
 			<% if (user_signed_in? && (current_user.id == @rental.user_id)) %>
-			<%= link_to 'Edit', edit_rental_path(@rental) %> |
+			 | <%= link_to 'Edit', edit_rental_path(@rental) %> |
 			<%= link_to 'Destroy', @rental, method: :delete, data: {confirm: 'Are you sure?'} %>
 			<% end %>
-
+	</div>
 	</div>
 	</div>
 </div>
-
 
 <script src="//maps.google.com/maps/api/js?key=AIzaSyBNQxaG0j6on6nJNF_JDlNszNGO3-8lN50"></script>
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>

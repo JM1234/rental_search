@@ -1,3 +1,7 @@
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Francois+One" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+
 <%= form_for @rental, html: { multipart: true } do |f| %>
   <% if @rental.errors.any? %>
     <div id="error_explanation">
@@ -10,99 +14,101 @@
       </ul>
     </div>
   <% end %>
-	<div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-	<div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, :size => "60" %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :property_type %><br>
-    <%= f.text_field :property_type %>
-  </div>
-  <div class="field">
-    <%= f.label :no_of_bedrooms %><br>
-    <%= f.number_field :no_of_bedrooms %>
-  </div>
-  <div class="field">
-    <%= f.label :bedroom_type %><br>
-    <%= f.text_field :bedroom_type %>
-  </div>
-  <div class="field">
-    <%= f.label :no_of_bathrooms %><br>
-    <%= f.number_field :no_of_bathrooms %>
-  </div>
-  <div class="field">
-    <%= f.label :bathroom_type %><br>
-    <%= f.text_field :bathroom_type %>
-  </div>
-  <div class="field">
-    <%= f.label :deposit %><br>
-    <%= f.text_field :deposit %>
-  </div>
-  <div class="field">
-    <%= f.label :maximum_no_of_people_per_room %><br>
-    <%= f.text_field :maximum_no_of_people_per_room %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_number %><br>
-    <%= f.text_field :contact_number %>
-  </div>
-  <div class="field">
-    <%= f.label :owner %><br>
-    <%= f.text_field :owner %>
-  </div>
-	<div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div>
-	<div>
-		<%= f.hidden_field :latitude, :value=>@rental.latitude %>
-		<%= f.hidden_field :longitude, :value=>@rental.longitude %>
+
+	<div class="rental_bg">
+		<div class="field">
+		  <%= f.label :title %>
+		  <%= f.text_field :title %>
+		</div>
+		<div class="field" style="height: 70px;">
+		  <%= f.label :description %>
+		  <%= f.text_area :description, :size => "60" %>
+		</div>
+		<div class="field">
+		  <%= f.label :price %>
+		  <%= f.text_field :price %>
+		</div>
+		<div class="field">
+		  <%= f.label :property_type %>
+		  <%= f.text_field :property_type %>
+		</div>
+		<div class="field">
+		  <%= f.label :no_of_bedrooms %>
+		  <%= f.number_field :no_of_bedrooms %>
+		</div>
+		<div class="field">
+		  <%= f.label :bedroom_type %>
+		  <%= f.text_field :bedroom_type %>
+		</div>
+		<div class="field">
+		  <%= f.label :no_of_bathrooms %>
+		  <%= f.number_field :no_of_bathrooms %>
+		</div>
+		<div class="field">
+		  <%= f.label :bathroom_type %>
+		  <%= f.text_field :bathroom_type %>
+		</div>
+		<div class="field">
+		  <%= f.label :deposit %>
+		  <%= f.text_field :deposit %>
+		</div>
+		<div class="field">
+		  <%= f.label :maximum_no_of_people_per_room %>
+		  <%= f.text_field :maximum_no_of_people_per_room %>
+		</div>
+		<div class="field">
+		  <%= f.label :address %>
+		  <%= f.text_field :address %>
+		</div>
+		<div class="field">
+		  <%= f.label :contact_number %>
+		  <%= f.text_field :contact_number %>
+		</div>
+		<div class="field">
+		  <%= f.label :owner %>
+		  <%= f.text_field :owner %>
+		</div>
+
+		<div class="actions" id='new_button'>
+		  <%= f.submit %>
+		</div
 	</div>
 
-	<div style='width: 800px;'>
-  	<div id="map" style='width: 800px; height: 400px;'></div>
+	<%= f.hidden_field :latitude, :value=>@rental.latitude %>
+	<%= f.hidden_field :longitude, :value=>@rental.longitude %>
 	</div>
-	<div class="actions">
-    <%= f.submit %>
-  </div>
+
+	<div class="edit_adds">
+		  <%= f.label :image, :id=>'image_label' %>
+		  <%= f.file_field :image %>
+		<div id="plot">
+			<p>Drag mark below to add your rental's location</p>
+			<div id="map" style='width: -moz-available; height:500px;'></div>
+		</div>		
+	</div>
 <% end %>
+	
 
 <script src="//maps.google.com/maps/api/js?key=AIzaSyBNQxaG0j6on6nJNF_JDlNszNGO3-8lN50"></script>
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 
 <script type='text/javascript'>
-
 	
 	if ($('#rental_latitude').val().length==0 && $('#rental_longitude').val().length==0)
 		var z=10;
 	else
 		var z=16;
 
-
 	var lt = $('#rental_latitude').val().length>0? parseFloat($('#rental_latitude').val()):11.00;
 	var ln = $('#rental_longitude').val().length>0? parseFloat($('#rental_longitude').val()):125.00;
 
-
-	console.log(z);
 	var map = new google.maps.Map(document.getElementById('map'),{
 
 		center:{
 			lat: lt,	
 			lng: ln
 		},
-		zoom:z		
+		zoom:z
 	});
 
 	var marker = new google.maps.Marker({
@@ -111,9 +117,8 @@
 			lng: ln
 		},
 		map: map,
-		draggable: true	
+		draggable: true
 	});
-
 	google.maps.event.addListener(marker, 'dragend', function () {
 		var lat = marker.getPosition().lat();
 		var lng = marker.getPosition().lng();

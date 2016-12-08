@@ -42,6 +42,11 @@ p#headlabel{
 
 ////show rental 
 
+div.title{
+	text-align: center;
+	font-size: 30px;
+}
+
 div.row{
 	margin-left: 15px;
 	margin-right: 15px;
@@ -80,6 +85,8 @@ img#show_image{
 	left: 0;
 	margin: auto;
 	position: absolute;
+	max-width: -moz-available;
+	max-height: 398px;
 }
 
 strong{
@@ -90,6 +97,11 @@ strong{
 td:not(strong){
 	font-family: Yanone Kaffeesatz;
 	white-space: nowrap;
+	font-size: 19px;
+}
+
+td{
+	width: 50%;
 }
 
 div.col-md-4>div.panel{
@@ -103,5 +115,111 @@ div.show_map>div.panel{
 	color: orange;
 	margin: 0px;
 	padding: 0px;
+}
+
+a#profile{
+	color: orange;
+	font-family: Yanone Kaffeesatz;
+	white-space: nowrap;
+	text-decoration: underline;
+}
+
+div.show_links{
+	margin-right: 10px;
+	float: right;
+}
+
+/////edit
+
+div.edit_bg{
+	margin: 10px;
+}
+
+
+div.rental_bg{
+	padding-top: 10px;
+	background: white;
+	opacity: 0.8;
+	width: 55%;
+	float: left;
+	border-top: #2fe015 3px solid;
+	margin-bottom: 20px;
+	border-bottom: #2fe015 3px solid;
+	border-right: solid 3px #2fe015;
+}
+
+div.rental_bg>div.field{
+	margin: 13px;
+}
+
+div.edit_adds{
+	float:left;
+	width: 45%;
+	text-align: center;
+	background: white;	
+	opacity: 0.8;
+	border-top: solid 3px #2fe015;
+	border-bottom: solid 3px #2fe015;
+	padding-top: 20px;
+}
+
+div#plot{
+	margin-top: 10px;
+	border-top: 3px solid #2fe015;
+	padding-top: 10px;
+}
+
+div.rental_bg>div.field>label, div#plot>p, label#image_label{
+	color: green;	
+	font-size: 18px; 
+	font-family: Francois One;
+	margin-left: 15px;
+}
+
+div.rental_bg>div.field>input:not(#rental_image), textarea#rental_description{
+	font-size: 18px;
+	float: right;
+	margin-right: 20%;
+	vertical-align: center;
+}
+
+input#rental_image{
+	width: -moz-available;
+	text-align: center;
+	vertical-align: center;
+	padding: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 18px;
+	font-family: Yanone Kaffeesatz;
+}
+
+div#new_button>input[type="submit"]{
+	font-size: 19px; 
+	font-family: Francois One;
+	display: block;
+	clear: left;
+}
+
+a#back_edit{
+	font-size: 20px; 
+	font-family: Francois One;
+	display: block;
+	float:right;
+}
+
+div#new_button>input[type="submit"]{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+div.edit_bg>h1{
+	text-align: center;
+	font-size: 25px;
+	font-family: Arvo;
+	color: green;
+	font-weight: bold;
 }
 
