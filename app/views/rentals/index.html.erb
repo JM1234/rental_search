@@ -12,7 +12,7 @@
 	<div class ="row">
 		<% @rentals.each do |rental| %>
 			<div class="col-sm-6 col-md-3">
-				<div class="thumbnail" style="color: rgb(47, 27, 11);">
+				<div class="thumbnail" style="color: rgb(47, 27, 11); font-size: 18px;">
 					<%= link_to (image_tag rental.image.url(:medium), class: 'image'), rental %>
 					<td><%= rental.title %></td>
 				</div>

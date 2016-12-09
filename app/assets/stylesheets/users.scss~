@@ -24,11 +24,11 @@ label, input, p#link{
 	color: #5e5e5e;
 }
 
-textarea, input:not(#checkbox){
+textarea, input:not(#checkbox):not(#rental_image){
 	width: 250px;
 }
 
-div.field:not(#checkfield, div.edit_bg>div.field){
+form.new_user>div.field, form.edit_user>div.field:not(#checkfield){
 	margin-left: 32%;
 }
 

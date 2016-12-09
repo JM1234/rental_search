@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Francois+One" />
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
 
-<div class="bg">
+<div class="bg_user">
 
 <h2 class="reg">Sign up</h2>
 
