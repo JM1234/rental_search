@@ -1,8 +1,8 @@
-<h1>Editing Rental</h1>
+<h1 id="edit_rental_h">Editing Rental</h1>
 
 <div class="edit_bg">
 <%= render 'form' %>
 
-<%= link_to 'Show', @rental %> |
-<%= link_to 'Back', rentals_path %>
+<%= link_to 'Show', @rental, :class=>'back_edit'%>
+<%= link_to 'Back', rentals_path, :id=>'show_link'  %>
 </div>

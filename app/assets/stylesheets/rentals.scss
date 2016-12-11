@@ -201,11 +201,17 @@ div#new_button>input[type="submit"]{
 	clear: left;
 }
 
-a#back_edit{
+a.back_edit{
 	font-size: 20px; 
 	font-family: Francois One;
 	display: block;
 	float:right;
+}
+
+a#show_link{
+	font-size: 20px; 
+	margin-right: 15px;
+	float: left;
 }
 
 div#new_button>input[type="submit"]{
@@ -215,7 +221,7 @@ div#new_button>input[type="submit"]{
 	margin-bottom: 20px;
 }
 
-div.edit_bg>h1{
+div.edit_bg>h1, h1#edit_rental_h{
 	text-align: center;
 	font-size: 25px;
 	font-family: Arvo;

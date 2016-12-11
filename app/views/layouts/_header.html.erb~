@@ -12,8 +12,27 @@ a.active{
 	margin-top: 2px;
 	font-size: 20px;
 }
+
 a.navbar-brand{
 	font-size: 30px;
+}
+
+div.search_bar{
+	display: inline-block;
+	margin-left: 15%;
+}
+
+a#nav_logout{
+	float: right;
+}
+
+div.navbar-collapse{
+	padding-right: 0px;
+	margin-right: 0px;
+}
+
+div.container{
+	width: 1400px;
 }
 
 </style>
@@ -43,7 +62,7 @@ a.navbar-brand{
 			<% end %>
 		</ul>
 		
-		<div class="nav navbar-nav" style="float:right;">
+		<div class="nav navbar-nav search_bar">
 		<%= form_tag search_rentals_path do %>			
 			<form class="navbar-form navbar-right" role="search" >
 				<div class="form-group nav navbar-nav">
@@ -53,6 +72,10 @@ a.navbar-brand{
 			</form>
 		<%end%>
 		</div>
+					
+				<% if user_signed_in? %>
+					<%= link_to "Logout", destroy_user_session_path, class: "active btn", :id=>'nav_logout' %>
+				<% end %>
 
 		</div>
 	</div>
