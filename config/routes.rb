@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  resources :reviews
+ 
   #get 'users/index'
   #get 'users/show'
 	
 	#get 'users/:id' => 'users#show'
   devise_for :users
-  resources :rentals
+  resources :rentals do
+		 resources :reviews, except: [:show, :index]
+	end
 	resources :users 
 	root 'rentals#index'
 

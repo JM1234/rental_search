@@ -24,7 +24,7 @@
 <% end %>
 
 <script>
-	$('#star-rating').raty({ 
+	$('#star-rating'.raty({ 
 		path: '/assets/',
 		scoreName: 'review[rating]'
 	});

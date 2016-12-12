@@ -7,6 +7,12 @@ class RentalsController < ApplicationController
 	end
 
   def show
+		@reviews = Review.where(rental_id: @rental.id).order("created_at DESC")
+		if @reviews.blank?
+			@avg_review = 0
+		else
+			@avg_review =  @reviews.average(:rating).round(2)
+		end
   end
 
   def new
