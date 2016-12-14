@@ -1,26 +1,31 @@
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Francois+One" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
+
 <%= form_for([@rental, @review]) do |f| %>
-  <% if @review.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+	<% if @review.errors.any? %>
+	  <div id="error_explanation">
+	    <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
 
-      <ul>
-      <% @review.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	    <ul>
+	    <% @review.errors.full_messages.each do |message| %>
+	      <li><%= message %></li>
+	    <% end %>
+	    </ul>
+	  </div>
+	<% end %>
 
-  <div class="field">
-    <div id="star-rating"> </div>
-  </div>
-  <div class="field">
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="field">
+		<label class="new-review-label" style="margin-top: 25px;"> Rating: </label>  
+		<div id="star-rating" class="new-rating"> </div>
+	</div>
+	<div class="field">
+	  <label class="new-review-label"> Comment: </label> <br>
+	  <%= f.text_area :comment %>
+	</div>
+	<div class="actions">
+	  <%= f.submit :id=>"submit_review" %>
+	</div>
 <% end %>
 
 <script>

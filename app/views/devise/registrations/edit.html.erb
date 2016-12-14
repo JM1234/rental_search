@@ -8,17 +8,17 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 	<p class="label">Personal Information</p>
-  <div class="field"  style="margin-top: 10px;">
-    <%= f.label :first_name %><br />
+  <div class="field"  style="margin-top: 20px;">
+    <%= f.label :first_name,:class=>"new-user-label" %><br />
     <%= f.text_field :first_name, autofocus: true %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name,:class=>"new-user-label"%><br />
     <%= f.text_field :last_name, autofocus: true %>
   </div>
   
   <div class="field" style="margin-bottom: 20px;">
-    <%= f.label :about %><br />
+    <%= f.label :about,:class=>"new-user-label" %><br />
     <%= f.text_area :about, autofocus: true %>
   </div>
 	
@@ -28,7 +28,7 @@
     <%= f.text_field :username, autofocus: true %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email,:class=>"new-user-label" %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -37,17 +37,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password,:class=>"new-user-label" %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation,:class=>"new-user-label" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="field" style="margin-bottom: 15px;">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password, :class=>"new-user-label" %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 

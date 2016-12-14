@@ -8,22 +8,28 @@ button.btn{
 	font-size: 15px;
 }
 
-a.active{
+.navbar-default .navbar-nav > li > a{
 	margin-top: 2px;
 	font-size: 20px;
+	color: #333;
 }
 
-a.navbar-brand{
+.navbar> .container .navbar-brand{
 	font-size: 30px;
+	color: #333;
 }
 
 div.search_bar{
 	display: inline-block;
-	margin-left: 15%;
+	margin-left: 12%;
 }
 
 a#nav_logout{
 	float: right;
+	color: #333;
+	margin-top: 9px;
+	margin-bottom: 9px;
+	font-size: 18px;
 }
 
 div.navbar-collapse{
@@ -68,7 +74,7 @@ div.container{
 				<div class="form-group nav navbar-nav">
 					<input id= "searchbar" name = "query" type="text" class="form-control"  placeholder="Search" style="margin-top: 10px; width: 300px;">
 				</div>
-				<button type="submit" class="btn btn-default" style="margin-top: 10px; margin-left: 7px;">Search</button>
+				<button type="submit" class="btn btn-default" style="margin-top: 9px; margin-left: 7px;">Search</button>
 			</form>
 		<%end%>
 		</div>

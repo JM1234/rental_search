@@ -94,21 +94,26 @@
 
 <script type='text/javascript'>
 	
-	if ($('#rental_latitude').val().length==0 && $('#rental_longitude').val().length==0)
-		var z=10;
-	else
-		var z=16;
+	var z=15;
 
-	var lt = $('#rental_latitude').val().length>0? parseFloat($('#rental_latitude').val()):11.00;
-	var ln = $('#rental_longitude').val().length>0? parseFloat($('#rental_longitude').val()):125.00;
+	if ( $('#rental_latitude').val().length>0 || $('#rental_longitude').val().length>0 ){
+		var lt = parseFloat($('#rental_latitude').val());
+		var ln =  parseFloat($('#rental_longitude').val());
+	}else{
+		var lt = 11.23968;
+		var ln = 124.99248;	
+		$('#rental_latitude').val(lt);
+		$('#rental_longitude').val(ln);	
 
+	}
+	
 	var map = new google.maps.Map(document.getElementById('map'),{
 
 		center:{
 			lat: lt,	
 			lng: ln
 		},
-		zoom:z,
+		zoom:z
 	});
 
 	var marker = new google.maps.Marker({
@@ -125,7 +130,12 @@
 
 		$('#rental_latitude').val(lat);
 		$('#rental_longitude').val(lng);
+		
+		console.log(
+			$('#rental_latitude').val() + ", " +
+			$('#rental_longitude').val()
+		);
+	});
 
-	});		
 </script>
 

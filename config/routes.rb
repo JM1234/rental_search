@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
 	post 'rentals/search' => 'rentals#search', as: 'search_rentals'
 	get '/:id', to: 'users#show', as: :profile
+	get 'rentals/:id' => 'reviews#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

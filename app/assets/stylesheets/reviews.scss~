@@ -54,6 +54,4 @@ a#newrev_back{
 textarea#review_comment{
 	width: 60%;
 	height: 120px;
-	font-family: Yanone Kaffeesatz;
-	font-size: 18px;
 }

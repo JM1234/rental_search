@@ -8,15 +8,30 @@
 
 	<p class="links" style="float: right;"><%= link_to "Edit Account", edit_user_registration_path(@user) %> | 
 	<%= link_to "Logout", destroy_user_session_path %></p>
-
-	<p style="clear: right;"><span class="label">Username: </span> <span class="info"><%= @user.username %></span></p>
-	<p><span class="label">About: </span> <span class="info"><%= @user.about %></span></p>
-	<p style="margin-bottom: 20px;"><span class="label" >Email:</span> <span class="info"><%= @user.email %></span></p>
+	
+		<div class="table-account">
+			<table>
+			<tbody>
+				<tr class="row-account">
+					<td class="account-left"> <label> Username: </label> </td>
+					<td class="account-right"> <%= @user.username %> </td>
+				</tr>
+				<tr class="row-account">
+					<td class="account-left"> <label> About: </label> </td>
+					<td class="account-right"> <%= @user.about %> </td>
+				</tr>
+				<tr class="row-account">
+					<td class="account-left"> <label> Email: </label> </td>
+					<td class="account-right"> <%= @user.email %> </td>
+				</tr>
+			</tbody>
+		</table>	
+	</div>
 
 	<div style="margin-top: 40px; margin-bottom: 15px; padding-top: 20px; text-align: center;">
-	<div style="width: 30%; float: left; border-top: solid 2px white;"></div>
-	<span  style="font-family: Arvo; font-size: 20px; color:  rgb(21, 32, 27); font-weight: bold;">UPLOADED RENTALS </span>
-	<div style="width: 30%; float: right; border-top: solid 2px white;"></div>
+	<div style="width: 30%; float: left; border-top: solid 2px #23527c"></div>
+	<span  style="font-family: Arvo; font-size: 20px; color:  rgb(8,64,90); font-weight: bold;">UPLOADED RENTALS </span>
+	<div style="width: 30%; float: right; border-top: solid 2px #23527c;"></div>
 	</div>
 
 

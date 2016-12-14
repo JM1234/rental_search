@@ -7,11 +7,14 @@ Rails.application.routes.draw do
   devise_for :users
   resources :rentals do
 		 resources :reviews, except: [:show, :index]
+	end
 	resources :users 
 	root 'rentals#index'
 
 	post 'rentals/search' => 'rentals#search', as: 'search_rentals'
 	get '/:id', to: 'users#show', as: :profile
+	get 'rentals/:id' => 'reviews#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

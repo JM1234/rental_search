@@ -1,5 +1,8 @@
-<h1>Editing Review</h1>
+<div class="bg">
+	<h1 class="reg">Edit Review</h1>
+	<p id="review_rental"> <%= @rental.title %> </p>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Back', rental_path(@rental) %>
+	<%= link_to 'Back', rental_path(@rental), :id=>"newrev_back" %>
+</div>

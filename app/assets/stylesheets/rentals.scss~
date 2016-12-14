@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.navbar-nav> li> a:hover{
+	box-shadow: inset 0 3px 5px rgba(0,2,4,0.125);
+}
+
 div.jumbotron{
 	background: #30415D;
 	margin-left: auto;
 	margin-right: auto;
 	width: 95%;
 	color: white;
-	opacity: 0.8;
 	font-family: Francois One;
 	text-align: center;
 	padding-bottom: 10px;
@@ -26,6 +29,11 @@ a.btn{
 	border: 2px black;
 }
 
+a.sign-up-index{
+	background: #286090;
+	border: 2px black;
+}
+
 div.gmap{
 	margin-right: auto;
 	margin-left: auto;
@@ -40,11 +48,20 @@ p#headlabel{
 	margin-bottom: 40px;
 }
 
+div.thumbnail{
+	font-family: Francois One;
+	font-size: 19px;
+	text-align: center;
+	color: #333;
+}
+
 ////show rental 
 
-div.title{
+div.title, h1.rental_title{
 	text-align: center;
 	font-size: 30px;
+	color: rgb(8,64,90);
+	font-family: Francois One;
 }
 
 div.row{
@@ -75,7 +92,7 @@ div.img_bg{
 	position: relative;
 	height: 400px;
 	background: white;
-	border: 2px solid rgba(193, 127, 227, 0.95);
+	border: 2px solid black;
 }
 
 img#show_image{
@@ -106,8 +123,8 @@ td{
 
 div.col-md-4>div.panel{
 	width: -moz-available;
-	background: #cbe6a3;
-	color: #lc5e60;
+	background: white;
+	color: orange;
 }
 
 div.show_map>div.panel{
@@ -129,6 +146,40 @@ div.show_links{
 	float: right;
 }
 
+div.show_links>a, div.review_header>a, a#edit_review_link{
+	color: #b03f13;
+}
+
+a.btn.btn-danger.write_button{
+	background: #b03f13;
+	margin: 20px;
+}
+
+div.rental_review{
+	background: white;
+	display: block;
+	clear: both;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	border: 2px  orange solid;
+	border-radius: 23px;
+	padding-bottom: 15px;
+}
+
+a.edit_review_link{
+	font-size: 15px;
+}
+
+div.reviews{
+	display: inline-block;
+	width: 40%;
+}
+
+div.review_header{
+	display: block;
+}
+
 /////edit
 
 div.edit_bg{
@@ -142,10 +193,10 @@ div.rental_bg{
 	opacity: 0.8;
 	width: 55%;
 	float: left;
-	border-top: #2fe015 3px solid;
+	border-top: blue 3px solid;
 	margin-bottom: 20px;
-	border-bottom: #2fe015 3px solid;
-	border-right: solid 3px #2fe015;
+	border-bottom: blue 3px solid;
+	border-right: solid 3px blue;
 }
 
 div.rental_bg>div.field{
@@ -158,19 +209,19 @@ div.edit_adds{
 	text-align: center;
 	background: white;	
 	opacity: 0.8;
-	border-top: solid 3px #2fe015;
-	border-bottom: solid 3px #2fe015;
+	border-top: solid 3px blue;
+	border-bottom: solid 3px blue;
 	padding-top: 20px;
 }
 
 div#plot{
 	margin-top: 10px;
-	border-top: 3px solid #2fe015;
+	border-top: 3px solid blue;
 	padding-top: 10px;
 }
 
 div.rental_bg>div.field>label, div#plot>p, label#image_label{
-	color: green;	
+	color: #0b6f90;	
 	font-size: 18px; 
 	font-family: Francois One;
 	margin-left: 15px;
@@ -209,7 +260,7 @@ a.back_edit{
 }
 
 a#show_link{
-		font-size: 20px; 
+	font-size: 20px; 
 	margin-right: 15px;
 	float: left;
 }
@@ -225,7 +276,13 @@ div.edit_bg>h1, h1#edit_rental_h{
 	text-align: center;
 	font-size: 25px;
 	font-family: Arvo;
-	color: green;
+	color: rgb(8,64,90);
 	font-weight: bold;
+}
+
+label.new-review-label{
+	color: #23527c;
+	font-size: 19px;
+	font-family: Francois One;
 }
 

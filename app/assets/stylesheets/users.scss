@@ -6,22 +6,68 @@ div.bg{
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 20px;
-	background: #d5d5d5;
+	background: #eaeaea;
 	width: 50%;
-	opacity: 0.9;
 	padding: 15px 15px 30px 15px;
+	border-radius: 20px;
+	border: 2px solid black;
 }
+
 
 h1.reg, h2.reg{
 	text-align: center;
 	font-family: Francois One;
 	margin-bottom: 20px;
+	color: rgb(8,64,90);
 }
 
-label, input, p#link{
+div.table-account{
+	padding-left: 34%;
+	clear: right;
+}
+
+label.new-user-label, label#box_label{
+	color: #23527c;
+	font-size: 19px;
+	font-family: Francois One;
+}
+
+label#box_label{
+	font-style: italic;
+}
+
+tr.row-account{
+	color: #23527c;
+}
+
+td.account-left{
+	padding-right: 40px;
+	font-family: Francois One;
+	font-size: 20px;
+}
+
+td.account-right{
+	font-family: Yanone Kaffeesatz;
+	font-size: 21px;
+}
+
+form.new_user>div.field, form.edit_user>div.field{
+	margin-bottom: 20px;
+}
+
+a#forgot_link, a#signup_link{
+	margin-bottom: 20px;
+}
+
+input, p#link{
 	font-family: Yanone Kaffeesatz;
 	font-size: 18px;
 	color: #5e5e5e;
+}
+
+div.login_other{
+	margin-bottom: 20px;
+	font-size: 19px;
 }
 
 textarea, input:not(#checkbox):not(#rental_image){
