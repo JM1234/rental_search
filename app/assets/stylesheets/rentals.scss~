@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.navbar-nav> li> a:hover{
+.navbar-nav> li> a:hover, .navbar-brand:hover{
 	box-shadow: inset 0 3px 5px rgba(0,2,4,0.125);
+}
+
+.btn-primary:hover, .btn:hover{
+	opacity: 0.5;
 }
 
 div.jumbotron{
