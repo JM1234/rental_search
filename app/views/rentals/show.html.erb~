@@ -9,7 +9,7 @@
 	<div class="show_map">
 		<div id="map" style='width:-moz-available; height: 725px;'></div>
 		<div class="star-rating" data-score= <%= @avg_review %> ></div>
-		<em><%= "#{@reviews.length} reviews" %> </em>
+		<em style="font-family: Arvo;" ><%= "#{@reviews.length} reviews" %> </em>
 		
 		<div class="table-responsive panel panel-default map_info">
 			<table class=table>
