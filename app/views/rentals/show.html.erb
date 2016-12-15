@@ -102,7 +102,7 @@
 
 	<div class="rental_review">
 			<div class='review_header'>			
-				<h1 class="rental_title" style="margin-top: 20px;"> <%=@rental.title%> Reviews and Ratings </h1>
+				<h1 class="rental_title" style="margin-top: 20px;"> Reviews and Ratings </h1>
 									
 				<%= link_to "Write a Review", new_rental_review_path(@rental) %>
 			</div>
@@ -147,7 +147,7 @@
 	});
 
 	$(".star-rating").raty({
-		path: '/assets/images',
+		path: '/assets/',
 		readOnly: true,
 		score: function() {
 			return $(this).attr('data-score');	
