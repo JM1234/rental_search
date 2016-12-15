@@ -29,7 +29,7 @@ div.search_bar{
 
 a#nav_logout{
 	float: right;
-	margin-right: 12%;
+	margin-right: 10%;
 	color: #333;
 	margin-top: 10px;
 	margin-bottom: 9px;
@@ -74,7 +74,7 @@ div.container{
 		</ul>
 		
 		<div class="nav navbar-nav search_bar">
-		<%= form_tag search_rentals_path do %>			
+		<%= form_tag search_rentals_path, :method=>'get' do %>			
 			<form class="navbar-form " role="search" >
 				<div class="form-group nav navbar-nav">
 					<input id= "searchbar" name = "query" type="text" class="form-control"  placeholder="Search" style="margin-top: 10px; width: 300px;">

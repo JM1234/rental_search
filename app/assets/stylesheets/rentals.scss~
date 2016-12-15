@@ -56,13 +56,17 @@ p#headlabel{
 	margin-bottom: 40px;
 }
 
-span.thumbnail{
+div.thumbnail{
 	font-family: Francois One;
 	font-size: 19px;
 	text-align: center;
 	color: #333;
 }
 
+div.gm-style-iw>div{
+	color: black;
+	font-family: Yanone Kaffeesatz;
+}
 ////show rental 
 
 div.title, h1.rental_title{
