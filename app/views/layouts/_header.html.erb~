@@ -24,12 +24,12 @@ button.btn{
 
 div.search_bar{
 	display: inline-block;
-	margin-left: 9%;
+	margin-left: 10%;
 }
 
 a#nav_logout{
 	float: right;
-	margin-right: 10%;
+	margin-right: 6%;
 	color: #333;
 	margin-top: 10px;
 	margin-bottom: 9px;
