@@ -14,10 +14,14 @@
 	a#signup_link{
 		float: right;	
 	}
+
+	a#login_link{
+		float: left;
+	}
 </style>
 
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(resource_name) %><br />
+  <%= link_to "Log in", new_session_path(resource_name), :id=> 'login_link' %>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>

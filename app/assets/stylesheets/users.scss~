@@ -65,6 +65,10 @@ input, p#link{
 	color: #5e5e5e;
 }
 
+p#link{
+	float: left;
+}
+
 div.login_other{
 	margin-bottom: 20px;
 	font-size: 19px;
@@ -87,6 +91,13 @@ input.submit{
 	margin-left: 32%;
 	font-family: Francois One;
 	font-size: 18px;
+}
+
+input.submit_forgotpass{
+	height: 40px;
+	margin-left: 32%;
+	font-family: Yanone Kaffeesatz;
+	font-size: 16px;
 }
 
 p.label, p.links{

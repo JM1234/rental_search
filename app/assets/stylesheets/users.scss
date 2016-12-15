@@ -55,7 +55,7 @@ form.new_user>div.field, form.edit_user>div.field{
 	margin-bottom: 20px;
 }
 
-a#forgot_link, a#signup_link{
+a#forgot_link, a#signup_link, a#login_link{
 	margin-bottom: 20px;
 }
 
@@ -63,6 +63,10 @@ input, p#link{
 	font-family: Yanone Kaffeesatz;
 	font-size: 18px;
 	color: #5e5e5e;
+}
+
+p#link{
+	float: left;
 }
 
 div.login_other{
@@ -87,6 +91,13 @@ input.submit{
 	margin-left: 32%;
 	font-family: Francois One;
 	font-size: 18px;
+}
+
+input.submit_forgotpass{
+	height: 40px;
+	margin-left: 32%;
+	font-family: Yanone Kaffeesatz;
+	font-size: 16px;
 }
 
 p.label, p.links{
